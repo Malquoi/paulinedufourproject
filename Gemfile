@@ -8,6 +8,7 @@ gem 'pg', '~> 0.21'
 gem 'puma'
 gem 'rails', '5.1.4'
 gem 'redis'
+gem 'devise'
 gem 'cloudinary'
 gem 'carrierwave', '~> 1.2'
 

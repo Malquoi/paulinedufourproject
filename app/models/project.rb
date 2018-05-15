@@ -10,7 +10,7 @@ class Project < ApplicationRecord
 
 
 
-has_many :artworks
+
 
 mount_uploader :photo, PhotoUploader
 
