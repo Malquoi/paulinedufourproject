@@ -5,7 +5,7 @@ before_action :set_project, only: [:show, :edit, :update, :destroy]
 
 
 def index
-  @projects = Project.where.not(id: '41')
+  @projects = Project.all
 end
 
 def new

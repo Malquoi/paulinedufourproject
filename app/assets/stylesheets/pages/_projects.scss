@@ -48,8 +48,8 @@
   padding-left: 10%;
   padding-right: 10%;
 
-  background-color: #3f382f;
-  //background-image: asset-url('600.jpg');
+  //background-color: #3f382f;
+  background-image: asset-url('600.jpg');
   background-position: top 0% right 0%,;
   background-repeat: no-repeat;
   background-size: 60%;
@@ -88,7 +88,7 @@
   padding-bottom: 12%;
   padding-right: 8%;
   //background-color: #3f382f;
-  //background-image: asset-url('600.jpg');
+  background-image: asset-url('600.jpg');
   background-position: top 25% right 15%,;
   background-repeat: no-repeat;
   background-size: 70%;
@@ -105,7 +105,7 @@
   padding-bottom: 12%;
   padding-right: 8%;
   //background-color: #3f382f;
-  //background-image: asset-url('600.jpg');
+  background-image: asset-url('600.jpg');
   background-position: top 30% right 10%,;
   background-repeat: no-repeat;
   background-size: 70%;
@@ -158,3 +158,170 @@
   z-index: 1;
 
 }
+
+//#project-card-vr-xs {
+  //padding-right: 40%;
+  //padding-top: 30%;
+
+//}
+
+
+.project-img {
+    display: none;
+    justify-content: center;
+    pointer-events: none;
+    z-index: 5;
+    height: 62%;
+    width: 82%;
+    //background-color: transparent;
+    //background-color: transparent;
+    position: fixed;
+     top: 52%;
+      left: 50%;
+    transform: translate(-50%, -50%) !important;
+    //background: white;
+}
+
+
+
+
+.modal-content {
+  pointer-events: none;
+  height: 100%;
+  opacity: 1;
+  z-index: 5;
+  box-shadow: none;
+  border-style: none;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) !important;
+  -webkit-animation-name: opacity1;
+  -webkit-animation-duration: 2.5s;
+  animation-timing-function: linear;
+  animation-name: opacity1;
+  animation-duration: 2.5s;
+  animation-timing-function: linear;
+  background: white;
+
+}
+
+@-webkit-keyframes opacity1 {
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes opacity1 {
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+
+
+.modal-content a {
+pointer-events: none;
+position:absolute;
+opacity: 0;
+transition: opacity 6s linear;
+top: 49%;
+left: 50%;
+z-index: 5;
+transform: translate(-50%, -50%) !important;
+box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+-webkit-animation-name: opacity2;
+-webkit-animation-duration: 6s;
+-webkit-animation-delay: 1s;
+-webkit-animation-timing-function: ease-in;
+-webkit-animation-fill-mode: forwards;
+animation-name: opacity2;
+animation-duration: 6s;
+animation-delay: 1s;
+animation-timing-function: linear;
+animation-fill-mode: forwards;
+
+}
+
+
+
+
+
+@-webkit-keyframes opacity2 {
+  0%   { opacity: 0; }
+  5%   { opacity: 0.01; }
+  10%   { opacity: 0.02; }
+  15%   { opacity: 0.03; }
+  20%   { opacity: 0.04; }
+  25%   { opacity: 0.06; }
+  30%   { opacity: 0.1; }
+  35%   { opacity: 0.15; }
+  40%   { opacity: 0.20; }
+  45%   { opacity: 0.25; }
+  50%   { opacity: 0.35; }
+  55%   { opacity: 0.45; }
+  60%   { opacity: 0.55; }
+  65%   { opacity: 0.65; }
+  70%   { opacity: 0.75; }
+  75%   { opacity: 0.85; }
+  80%   { opacity: 0.95; }
+  85%   { opacity: 1; }
+  90%   { opacity: 1; }
+  95%   { opacity: 1; }
+  100% { opacity: 1; }
+}
+
+@keyframes opacity2 {
+   0%   { opacity: 0; }
+  5%   { opacity: 0.01; }
+  10%   { opacity: 0.02; }
+  15%   { opacity: 0.03; }
+  20%   { opacity: 0.04; }
+  25%   { opacity: 0.06; }
+  30%   { opacity: 0.1; }
+  35%   { opacity: 0.15; }
+  40%   { opacity: 0.20; }
+  45%   { opacity: 0.25; }
+  50%   { opacity: 0.35; }
+  55%   { opacity: 0.45; }
+  60%   { opacity: 0.55; }
+  65%   { opacity: 0.65; }
+  70%   { opacity: 0.75; }
+  75%   { opacity: 0.85; }
+  80%   { opacity: 0.95; }
+  85%   { opacity: 1; }
+  90%   { opacity: 1; }
+  95%   { opacity: 1; }
+  100% { opacity: 1; }
+}
+
+
+.close {
+    display: none;
+}
+
+
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 200px){
+    .modal-content {
+      width: 50vh;
+    }
+}
+
+
+
+  .col-xs-12 {
+    //background-color: blue;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .col-sm-4 {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    //background: yellow;
+
+
+  }
+
+

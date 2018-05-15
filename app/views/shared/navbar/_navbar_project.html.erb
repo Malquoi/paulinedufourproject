@@ -10,9 +10,9 @@
       <a><% if current_user %>
         <%= link_to "delete |", project_path(@project), method: :delete, class: "link" %>
       <% end %></a>
-      <a><% if current_user %>
-        <%= link_to " new artwork", new_project_artwork_path(@project), class: "link" %>
-      <% end %></a>
+      <a><%# if current_user %>
+        <%#= link_to " new artwork", new_project_artwork_path(@project), class: "link" %>
+      <%# end %></a>
       </div>
   </div>
   <div class="navbar-right ">

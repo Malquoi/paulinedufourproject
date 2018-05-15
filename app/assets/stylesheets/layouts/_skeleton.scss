@@ -11,19 +11,33 @@
   //text-shadow: 0px 1px rgba(0, 0, 0, 0.2);
   font-weight: lighter;
   letter-spacing: 3px;
-  background: fuchsia;
+  //background: fuchsia;
 
 
   cursor: crosshair;
   //background: #F4F4F4;
 
-  //-webkit-animation-name: showpage;
-   //-webkit-animation-duration: 3s;
-   //animation-name: showpage;
-  //animation-duration: 3s;
+  -webkit-animation-name: showpage;
+   -webkit-animation-duration: 3s;
+   animation-name: showpage;
+  animation-duration: 3s;
 
 }
 
+@-webkit-keyframes showpage {
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes showpage {
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+::-webkit-scrollbar {
+    width: 0px;
+    background: transparent; /* make scrollbar transparent */
+}
 
 
 .skeleton-left {
@@ -34,7 +48,7 @@
   justify-content: space-around;
   align-items: center;
 
-  background-color : yellow;
+  //background-color : yellow;
 }
 
 
@@ -66,6 +80,9 @@
   top: 0px;
   justify-content: space-around;
   align-items: center;
-  background-color : yellow;
+  //background-color : yellow;
 }
+
+
+
 

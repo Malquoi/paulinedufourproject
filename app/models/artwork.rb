@@ -1,4 +1,5 @@
 class Artwork < ApplicationRecord
+
    belongs_to :project
 
 default_scope { order(ranking: :asc)}
