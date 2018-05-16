@@ -3,15 +3,11 @@
     <div class="navbar-left-links hidden-xs">
       <a><% if user_signed_in? %>
         <%= link_to "log-out |", destroy_user_session_path, method: :delete, class: "link" %>
-        <% end %></a>
-      <a><% if current_user%>
-        <%= link_to " update |", edit_project_path(@project), class: "link" %>
-      <% end %></a>
+        <% end %>
       <a><% if current_user %>
-        <%= link_to "delete |", project_path(@project), method: :delete, class: "link" %>
-      <% end %></a>
+        <%= link_to " update |", edit_artwork_path, class: "link" %><% end %></a>
       <a><% if current_user %>
-        <%= link_to " new artwork", new_project_artwork_path(@project), class: "link" %>
+        <%= link_to " delete", artwork_path(@artwork), method: :delete, class: "link" %>
       <% end %></a>
       </div>
   </div>
@@ -20,4 +16,3 @@
   </div>
 
   </div>
-

@@ -1,11 +1,15 @@
 class ProjectsController < ApplicationController
 
-before_action :set_project, only: [:show, :edit, :update, :destroy]
+skip_before_action :authenticate_user!, only: [:index, :show, :vr, :showvr, :lastest]
+
+before_action :set_project, only: [:show, :edit, :update, :destroy, :showvr, :lastest]
 
 
 
 def index
-  @projects = Project.all
+
+  @projects = Project.where.not(id: '41')
+
 end
 
 def new
@@ -21,12 +25,20 @@ def create
   end
 end
 
-def edit
+  def edit
   end
 
   def show
 
   end
+
+  def showvr
+
+  end
+
+  def lastest
+  end
+
 
   def update
     @project.update(project_params)
@@ -39,18 +51,22 @@ def edit
   end
 
 
+def vr
+  @projects = Project.where(category: 'virtual_reality')
+end
 
 
   private
 
-   def set_project
+
+  def set_project
     @project = Project.find(params[:id])
   end
 
- def project_params
+
+  def project_params
     params.require(:project).permit(:name, :name2, :category, :presentation, :photo, :date, :ranking, :commentary)
   end
 
 
 end
-
