@@ -1,9 +1,9 @@
 class ArtworksController < ApplicationController
 
-  skip_before_action :authenticate_user!, only: [:index, :show, :showvr, :illustration]
+  skip_before_action :authenticate_user!, only: [:index, :show, :showvr]
 
   before_action :set_project, only: [:new, :create]
-  before_action :find_artwork, only: [:show, :edit, :update, :destroy, :showvr, :illustration]
+  before_action :find_artwork, only: [:show, :edit, :update, :destroy, :showvr]
 
   def index
     @artworks = Artwork.all
@@ -13,9 +13,10 @@ class ArtworksController < ApplicationController
     @artwork = Artwork.new
   end
 
+
   def create
     @artwork = Artwork.new(artwork_params)
-    @artwork.project = @project
+     @artwork.project = @project
 
     if @artwork.save
       redirect_to artwork_path(@artwork)
@@ -31,8 +32,6 @@ class ArtworksController < ApplicationController
 
   end
 
-  def illustration
-  end
 
   def showvr
 
@@ -65,3 +64,4 @@ class ArtworksController < ApplicationController
 
 
 end
+

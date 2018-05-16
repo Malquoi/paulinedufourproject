@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+
+
   devise_for :users
 
   root to: 'projects#index'
@@ -20,6 +22,11 @@ Rails.application.routes.draw do
 
   end
 
-  resources :artworks, only: [:index]
+resources :artworks, only: [:index]
 
+resources :events, only: [:index, :new, :create, :edit, :show, :update, :destroy]
+
+resources :breakings, only: [:index, :new, :create, :edit, :show, :update, :destroy]
+
+resources :texts, only: [:index, :new, :create, :edit, :update, :destroy]
 end

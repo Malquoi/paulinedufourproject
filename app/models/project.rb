@@ -10,13 +10,13 @@ CATEGORIES =%w( drawing painting virtual_reality other_project )
 
 
 def previous
-  projects = self.class.where.not({id: '41'})
+  projects = self.class.where.not({id: '4'})
   projects.where('ranking < ?', self.ranking).last
 
 end
 
 def next
-  projects = self.class.where.not({id: '41'})
+  projects = self.class.where.not({id: '4'})
    projects.where('ranking > ?', self.ranking).first
 end
 

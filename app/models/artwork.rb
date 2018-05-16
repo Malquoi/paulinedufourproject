@@ -1,15 +1,13 @@
 class Artwork < ApplicationRecord
-
-   belongs_to :project
+  belongs_to :project
 
 default_scope { order(ranking: :asc)}
 
+mount_uploader :photo, PhotoUploader
+
+ CATEGORIES2 =%w( artwork illustration )
 
 
-
-  mount_uploader :photo, PhotoUploader
-
-  CATEGORIES2 =%w( artwork illustration )
 
 def previous
   artworks = self.class.where('project_id = ?', self.project_id )
@@ -41,5 +39,6 @@ end
   validates :ranking, presence: true
   validates :date, presence: true
   validates :project_id, presence:true
-   validates :category, inclusion: { in: CATEGORIES2 }, presence: true
+  validates :category, inclusion: { in: CATEGORIES2 }, presence: true
+
 end
