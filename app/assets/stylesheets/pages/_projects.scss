@@ -123,12 +123,13 @@
   padding: 2px;
   margin-top: 5px;
   margin-bottom: 5px;
-  cursor: crosshair;
+  cursor: pointer;
+  white-space: nowrap;
   position: relative;
   padding-left: 1px;
   padding-right: 1px;
   //z-index: 1;
-  background: rgba(234, 223, 229, 0.15);
+  //background: rgba(234, 223, 229, 0.15);
 
   //width: 150px;
 
@@ -151,11 +152,11 @@
   text-align: center;
   margin-top: 35px;
   margin-bottom: 35px;
-  cursor: crosshair;
+  cursor: pointer;
   background: #d90a12;
 
   //background-color: white;
-  z-index: 1;
+  //z-index: 1;
 
 }
 
@@ -167,82 +168,40 @@
 
 
 .project-img {
-    display: none;
     justify-content: center;
     pointer-events: none;
     z-index: 5;
     height: 62%;
     width: 82%;
-    //background-color: transparent;
-    //background-color: transparent;
+    background-color: white;
     position: fixed;
-     top: 52%;
-      left: 50%;
+    top: 52%;
+    left: 50%;
     transform: translate(-50%, -50%) !important;
-    //background: white;
+     opacity: 0;
+    transition: 1s;
 }
 
-
-
-
-.modal-content {
-  pointer-events: none;
-  height: 100%;
+.project-card:hover .project-img {
   opacity: 1;
-  z-index: 5;
-  box-shadow: none;
-  border-style: none;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) !important;
-  -webkit-animation-name: opacity1;
-  -webkit-animation-duration: 2.5s;
-  animation-timing-function: linear;
-  animation-name: opacity1;
-  animation-duration: 2.5s;
-  animation-timing-function: linear;
-  background: white;
-
+  transition: 2s linear;
 }
 
-@-webkit-keyframes opacity1 {
-  0%   { opacity: 0; }
-  100% { opacity: 1; }
-}
-
-@keyframes opacity1 {
-  0%   { opacity: 0; }
-  100% { opacity: 1; }
-}
-
-
-
-.modal-content a {
-pointer-events: none;
-position:absolute;
-opacity: 0;
-transition: opacity 6s linear;
-top: 49%;
-left: 50%;
-z-index: 5;
-transform: translate(-50%, -50%) !important;
-box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+.project-card:hover .project-img a {
+  //opacity: 1;
+  //transition: 4s ease;
+//transition-delay: 1s;
 -webkit-animation-name: opacity2;
--webkit-animation-duration: 6s;
--webkit-animation-delay: 1s;
+-webkit-animation-duration: 4s;
+-webkit-animation-delay: 0.5s;
 -webkit-animation-timing-function: ease-in;
 -webkit-animation-fill-mode: forwards;
 animation-name: opacity2;
-animation-duration: 6s;
-animation-delay: 1s;
+animation-duration: 4s;
+animation-delay: 0.5s;
 animation-timing-function: linear;
 animation-fill-mode: forwards;
-
 }
-
-
-
-
 
 @-webkit-keyframes opacity2 {
   0%   { opacity: 0; }
@@ -292,19 +251,16 @@ animation-fill-mode: forwards;
   100% { opacity: 1; }
 }
 
-
-.close {
-    display: none;
+.project-img a {
+  position:fixed;
+  top: 50%;
+  left: 50%;
+transform: translate(-50%, -50%) !important;
+box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+opacity: 0;
+ //transition: 2s;
 }
 
-
-
-/* 100% Image Width on Smaller Screens */
-@media only screen and (max-width: 200px){
-    .modal-content {
-      width: 50vh;
-    }
-}
 
 
 

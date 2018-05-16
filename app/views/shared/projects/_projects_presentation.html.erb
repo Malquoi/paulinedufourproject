@@ -5,15 +5,11 @@
                 <div class="project-name">
                   <div id="project-path"><%= link_to project.name, project_path(project), class: "link-project"%></div>
                   <p>-</p>
+                  <div class="project-img hidden-xs">
 
+                      <a><%= cl_image_tag project.photo, height: 450, crop: :scale  %></a>
 
-                 <div class="project-img hidden-xs">
-                    <span class="close">&times;</span>
-                    <div class="modal-content">
-                         <a><%= cl_image_tag project.photo, height: 450, crop: :scale  %></a>
-                    </div>
                   </div>
-
                 </div>
            </div>
         </div>
