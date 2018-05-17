@@ -3,7 +3,7 @@ class InfosController < ApplicationController
 
 skip_before_action :authenticate_user!, only: [:index]
 
-  before_action :set_info, only: [:edit, :show, :update, :destroy]
+before_action :set_info, only: [:edit, :show, :update, :destroy]
 
 
   def index

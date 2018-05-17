@@ -10,23 +10,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180516161615) do
+ActiveRecord::Schema.define(version: 20180517125745) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "artworks", force: :cascade do |t|
     t.string "title"
-    t.integer "ranking"
-    t.string "category"
     t.string "description"
+    t.integer "ranking"
     t.string "format"
     t.string "date"
     t.text "commentary"
     t.string "photo"
+    t.bigint "project_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.bigint "project_id"
+    t.string "category"
     t.index ["project_id"], name: "index_artworks_on_project_id"
   end
 
